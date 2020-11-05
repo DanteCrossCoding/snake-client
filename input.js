@@ -5,17 +5,23 @@ const userInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }  
-  if ( key === w) {
+  if ( key === 'w') {
     conn.write('Move: up')
   }
-  if ( key === s) {
+  if ( key === 's') {
     conn.write('Move: down')
   }
-  if ( key === a) {
+  if ( key === 'a') {
     conn.write('Move: left')
   }
-  if ( key === d) {
+  if ( key === 'd') {
     conn.write('Move: right')
+  }
+  if (key === 'h') {
+    conn.write('Say: Hi!')
+  }
+  if (key === 'g') {
+    conn.write('Say: GG')
   }
 };
 
