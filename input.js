@@ -1,16 +1,14 @@
 const net = require('net');
+const constants = require('./constants');
 let connection;
 
 const userInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }  
-  if ( key === 'w') {
-    conn.write('Move: up')
-  }
-  if ( key === 's') {
-    conn.write('Move: down')
-  }
+  conn.write(MOVE_UP_KEY)
+  conn.write(MOVE_DOWN_KEY)
+  
   if ( key === 'a') {
     conn.write('Move: left')
   }
